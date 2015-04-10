@@ -3,14 +3,14 @@ RSpec.feature 'Updating currencies settings' do
 
   background do
     reset_spree_preferences do |config|
-      config.supported_currencies   = 'USD'
-      config.allow_currency_change  = false
+      config.supported_currencies = 'USD'
+      config.allow_currency_change = false
       config.show_currency_selector = false
     end
   end
 
   scenario 'allows to update supported currencies' do
-    visit spree.edit_admin_general_settings_path()
+    visit spree.edit_admin_general_settings_path
 
     # Test initial state
     expect(find_field('supported_currencies').value).to eq 'USD'
