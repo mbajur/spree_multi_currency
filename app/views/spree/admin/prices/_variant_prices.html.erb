@@ -4,7 +4,7 @@
 	<div class="panel <%= panel_class %>">
 	  <div class="panel-heading">
 	  	<h3 class="panel-title">
-	  		<%= variant.sku %>
+	  		<span class="sku"><%= variant.sku %></span>
 
 	  		<span class="text-muted pull-right">
 	  			<%= variant.is_master? ? Spree.t(:master) : variant.options_text.blank? ? Spree.t(:variant) : variant.options_text %>
