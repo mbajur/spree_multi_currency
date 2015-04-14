@@ -1,6 +1,6 @@
 <%= render 'spree/admin/shared/product_tabs', current: 'Prices' %>
 
-<%= form_tag do %>
+<%= form_tag nil, { class: 'form-horizontal' } do %>
   <div class="row">
     <div class="col-md-6">
       <%= render 'variant_prices', variant: @product.master %>
